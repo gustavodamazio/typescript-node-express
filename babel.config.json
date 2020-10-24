@@ -1,0 +1,24 @@
+{
+    "presets": [["@babel/preset-env", { "targets": { "node": "12" } }], "@babel/preset-typescript"],
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "alias": {
+                    "@controllers": "./src/app/controllers",
+                    "@errors": "./src/errors",
+                    "@middlewares": "./src/app/middlewares",
+                    "@models": "./src/app/models",
+                    "@routes": "./src/routes/index",
+                    "@server": "./src/Server",
+                    "@services": "./src/app/services",
+                    "@views": "./src/app/views"
+                }
+            }
+        ],
+        "babel-plugin-transform-typescript-metadata",
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        ["@babel/plugin-proposal-class-properties", { "loose": true }]
+    ],
+    "ignore": ["**/*.spec.ts"]
+}
