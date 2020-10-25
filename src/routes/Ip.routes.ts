@@ -6,6 +6,6 @@ const publicIpController = new PublicIpController();
 // -----------------------------------------------------------------------------------------------------
 // @ /ip
 // -----------------------------------------------------------------------------------------------------
-router.all('/', publicIpController.show);
+router.get('/', publicIpController.show);
 
 export default router;
